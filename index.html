@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recurring Event Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recurring Event Instance Generator</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="startDate">Event Start Date:</label>
+                <input type="date" id="startDate" value="2025-07-24">
+            </div>
+
+            <div class="input-group">
+                <label for="eventTime">Event Time:</label>
+                <input type="time" id="eventTime" value="09:00">
+            </div>
+
+            <div class="input-group">
+                <label for="recurrenceType">Recurrence Type:</label>
+                <select id="recurrenceType">
+                    <option value="daily">Daily</option>
+                    <option value="weekly" selected>Weekly</option>
+                </select>
+            </div>
+
+            <div class="input-group" id="dayOfWeekGroup">
+                <label for="dayOfWeek">Day of Week:</label>
+                <select id="dayOfWeek">
+                    <option value="1">Monday</option>
+                    <option value="2">Tuesday</option>
+                    <option value="3">Wednesday</option>
+                    <option value="4">Thursday</option>
+                    <option value="5">Friday</option>
+                    <option value="6">Saturday</option>
+                    <option value="0">Sunday</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="numOccurrences">Number of Occurrences:</label>
+                <input type="number" id="numOccurrences" value="10" min="1">
+            </div>
+
+            <div class="input-group">
+                <label for="viewWindowStart">View Window Start:</label>
+                <input type="date" id="viewWindowStart" value="2025-07-24">
+            </div>
+
+            <div class="input-group">
+                <label for="viewWindowEnd">View Window End:</label>
+                <input type="date" id="viewWindowEnd" value="2025-09-30">
+            </div>
+
+            <button id="generateBtn">Generate Instances</button>
+        </div>
+
+        <h2>Generated Event Instances:</h2>
+        <div id="instanceList" class="instance-list">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
